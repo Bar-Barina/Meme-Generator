@@ -10,29 +10,61 @@
   <body onload="onInit()">
     <!-- H1 -->
     <h1>Barina's Meme Generator!</h1>
-    
+
     <!-- Canvas section -->
     <div class="canvas-container">
-        <canvas class="my-canvas" width="400" height="400"></canvas>
+      <canvas class="my-canvas" width="400" height="400"></canvas>
     </div>
 
     <!-- Meme editor section -->
     <section class="editor-container">
-    <!-- Text input -->
-        <label for="text">Enter Text:</label>
-        <input
-          type="text"
-          class="text"
-          oninput="onChangeText(this.value)"
-          placeholder="Enter text"/>
-          <!-- Color picker -->
-  <button type="button" class="clr-picker-btn"></button>
-    
-    <!-- Image gallery section -->
-    <section class="gallery-container"></section>
+      <!-- Text input -->
+      <label for="text">Enter Text:</label>
+      <input
+        type="text"
+        class="text"
+        oninput="onChangeText(this.value)"
+        placeholder="Enter text"
+      />
 
+      <!-- Color picker -->
+      <label for="color">Pick a color:</label>
+      <input
+        type="color"
+        class="clr-picker"
+        onchange="onChangeColor(this.value)"
+      />
 
+      <!-- Font size btns -->
+      <button
+        type="button"
+        title="increase-font-size"
+        class="font-size-btn"
+        onclick="onChangeFontSize(5)"
+      >
+        <img src="ICONS/increase font - icon.png" />
+      </button>
+      <button
+        type="button"
+        title="decrease-font-size"
+        class="font-size-btn"
+        onclick="onChangeFontSize(-5)"
+      >
+        <img src="ICONS/decrease font - icon.png" />
+      </button>
 
+      <!-- Switch line btn -->
+      <button
+        type="button"
+        title="switch-line"
+        class="switch-line-btn"
+        onclick="onSwitchLine()"
+      >
+        <img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" />
+      </button>
+
+      <!-- Image gallery section -->
+      <section class="gallery-container"></section>
     </section>
 
     <script src="js/utilService/util.js"></script>

@@ -13,6 +13,7 @@ function renderGallery() {
   elGContainer.innerHTML = strHTML
 }
 
+// A function which been called by the DOM and renders the right image
 function onImgSelect(imgId) {
   setImg(imgId)
   renderMeme()
