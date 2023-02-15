@@ -57,5 +57,5 @@ function onChangeFontSize(num) {
 
 function onSwitchLine() {
   switchLine()
-  renderMeme()
+  // renderMeme()
 }

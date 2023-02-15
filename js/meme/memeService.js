@@ -8,22 +8,22 @@ var IMGS_STORAGE_KEY = 'Images'
 var gImgs = [
   { id: 1, url: 'imgs-square/1.jpg', keywords: ['funny', 'usa'] },
   { id: 2, url: 'imgs-square/2.jpg', keywords: ['funny', 'usa'] },
-  // { id: 3, url: 'imgs-square/3.jpg', keywords: ['funny', 'usa'] },
-  // { id: 4, url: 'imgs-square/4.jpg', keywords: ['funny', 'usa'] },
-  // { id: 5, url: 'imgs-square/5.jpg', keywords: ['funny', 'usa'] },
-  // { id: 6, url: 'imgs-square/6.jpg', keywords: ['funny', 'usa'] },
-  // { id: 7, url: 'imgs-square/7.jpg', keywords: ['funny', 'usa'] },
-  // { id: 8, url: 'imgs-square/8.jpg', keywords: ['funny', 'usa'] },
-  // { id: 9, url: 'imgs-square/9.jpg', keywords: ['funny', 'usa'] },
-  // { id: 10, url: 'imgs-square/10.jpg', keywords: ['funny', 'usa'] },
-  // { id: 11, url: 'imgs-square/11.jpg', keywords: ['funny', 'usa'] },
-  // { id: 12, url: 'imgs-square/12.jpg', keywords: ['funny', 'usa'] },
-  // { id: 13, url: 'imgs-square/13.jpg', keywords: ['funny', 'usa'] },
-  // { id: 14, url: 'imgs-square/14.jpg', keywords: ['funny', 'usa'] },
-  // { id: 15, url: 'imgs-square/15.jpg', keywords: ['funny', 'usa'] },
-  // { id: 16, url: 'imgs-square/16.jpg', keywords: ['funny', 'usa'] },
-  // { id: 17, url: 'imgs-square/17.jpg', keywords: ['funny', 'usa'] },
-  // { id: 18, url: 'imgs-square/18.jpg', keywords: ['funny', 'usa'] },
+  { id: 3, url: 'imgs-square/3.jpg', keywords: ['funny', 'usa'] },
+  { id: 4, url: 'imgs-square/4.jpg', keywords: ['funny', 'usa'] },
+  { id: 5, url: 'imgs-square/5.jpg', keywords: ['funny', 'usa'] },
+  { id: 6, url: 'imgs-square/6.jpg', keywords: ['funny', 'usa'] },
+  { id: 7, url: 'imgs-square/7.jpg', keywords: ['funny', 'usa'] },
+  { id: 8, url: 'imgs-square/8.jpg', keywords: ['funny', 'usa'] },
+  { id: 9, url: 'imgs-square/9.jpg', keywords: ['funny', 'usa'] },
+  { id: 10, url: 'imgs-square/10.jpg', keywords: ['funny', 'usa'] },
+  { id: 11, url: 'imgs-square/11.jpg', keywords: ['funny', 'usa'] },
+  { id: 12, url: 'imgs-square/12.jpg', keywords: ['funny', 'usa'] },
+  { id: 13, url: 'imgs-square/13.jpg', keywords: ['funny', 'usa'] },
+  { id: 14, url: 'imgs-square/14.jpg', keywords: ['funny', 'usa'] },
+  { id: 15, url: 'imgs-square/15.jpg', keywords: ['funny', 'usa'] },
+  { id: 16, url: 'imgs-square/16.jpg', keywords: ['funny', 'usa'] },
+  { id: 17, url: 'imgs-square/17.jpg', keywords: ['funny', 'usa'] },
+  { id: 18, url: 'imgs-square/18.jpg', keywords: ['funny', 'usa'] },
 ]
 
 var gMeme = {
@@ -79,5 +79,8 @@ function changeFontSize(num) {
 }
 
 function switchLine() {
-  if (!gMeme.selectedLineIdx === 0) drawText(txt,1500,1500)
+  if (gMeme.selectedLineIdx === 0) {
+    drawText(gMeme.lines[gMeme.selectedLineIdx].txt, 200, 300)
+  }
+  drawText(gMeme.lines[gMeme.selectedLineIdx].txt, 200, 370)
 }

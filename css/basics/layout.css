@@ -1,0 +1,8 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.gallery-layout {
+
+}
