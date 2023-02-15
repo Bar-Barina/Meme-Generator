@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(250, 239, 225);
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline rgb(244, 71, 71);
+}
+
+.canvas-container {
+  background-color: rgb(215, 193, 160);
+  border: 1px solid rgb(161, 161, 161);
+  margin: auto;
+  width: 65vw;
+  height: 45vh;
+}
+
+.my-canvas {
+  display: block;
+  margin: auto;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto 1fr);
+    gap: 10px;
+    /* grid-template-rows: repeat(4.5,1fr); */
+    width: 600px;
+    height: 600px;
+    margin-top: 140px;
+    background-color: rgb(215, 193, 160);
+}
+
+.gallery-img {
+    width: 150px;
+    border: 1px solid rgb(95, 86, 189);
+}
+
+.editor-container {
+padding: 10px;
+}
+
+
+
+
+
+.clr-picker-btn {
+width: 35px;
+height: 35px;
+}

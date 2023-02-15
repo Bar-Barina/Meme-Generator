@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Barina's Meme Generator</title>
+  </head>
+  <body onload="onInit()">
+    <!-- H1 -->
+    <h1>Barina's Meme Generator</h1>
+    
+    <!-- Canvas section -->
+    <div class="canvas-container">
+        <canvas class="my-canvas" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Meme editor section -->
+    <section class="editor-container">
+    <!-- Text input -->
+        <label for="text">Enter Text:</label>
+        <input
+          type="text"
+          class="text"
+          oninput="onChangeText(this.value)"
+          placeholder="Enter text"/>
+          <!-- Color picker -->
+  <button type="button" class="clr-picker-btn"></button>
+    
+    <!-- Image gallery section -->
+    <section class="gallery-container"></section>
+
+
+
+    </section>
+
+    <script src="js/utilService/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/meme/memeService.js"></script>
+    <script src="js/gallery/galleryService.js"></script>
+    <script src="js/meme/memeController.js"></script>
+    <script src="js/gallery/galleryController.js"></script>
+  </body>
+</html>
