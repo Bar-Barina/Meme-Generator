@@ -3,10 +3,16 @@
   height: 35px;
 }
 
-
 .flex-btn {
-  width: 60px;
-  height: 50px;
+  width: 5em;
+  height: 4em;
   margin-top: 10px;
   margin-left: 20px;
+  background-color: #1d3d86;
+  color: white;
+  cursor: pointer;
+}
+
+.flex-btn:hover {
+  background-color: #305dc5;
 }

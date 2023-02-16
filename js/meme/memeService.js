@@ -108,8 +108,8 @@ function randomMeme() {
   gMeme.lines[gMeme.selectedLineIdx].txt = randMemeTxt
   let randMemeSize = getRandomIntInclusive(15, 40)
   gMeme.lines[gMeme.selectedLineIdx].size = randMemeSize
-  let randMemeColor = getRandomColor()
-  gMeme.lines[gMeme.selectedLineIdx].color = randMemeColor
+  // let randMemeColor = getRandomColor()
+  // gMeme.lines[gMeme.selectedLineIdx].color = randMemeColor
 }
 
 // A function which handle the text alignment
@@ -127,10 +127,12 @@ function alignText(num) {
   }
 }
 
+// A function which delete a line
 function deleteLine() {
   gMeme.lines.splice(gMeme.selectedLineIdx, 1)
 }
 
+// A function which add a line
 function addLine() {
   let newLine = getMeme()
   gMeme.lines.unshift(newLine)

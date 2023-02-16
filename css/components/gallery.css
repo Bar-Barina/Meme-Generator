@@ -1,13 +1,20 @@
 .gallery-container {
-    width: 100%;
-    height: 100%;
-    background-color: #393939;
-    background-color: #1d3d86;
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+  background-color: #1d3d86;
+}
 
-  }
+.rand-meme {
+  border: 2px solid black;
+  padding: 15px;
+  background-color: rgb(245, 245, 245);
+}
 
-  .rand-meme {
-    border: 2px solid black;
-    padding: 15px;
-    background-color:rgb(245, 245, 245);
-  }
+.rand-meme span {
+  margin-left: 7em;
+  text-align: center;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: black;
+}

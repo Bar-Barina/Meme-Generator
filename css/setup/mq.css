@@ -1,12 +1,17 @@
-@media (max-width: 1370px) {
+@media (max-width: 1380px) {
   .gallery-layout {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .editor-layout {
+    grid-template-columns: 1fr;
+    display: inline;
+    width: 80%;
   }
 }
 
 @media (max-width: 1200px) {
   .editor-layout {
-    /* display: block; */
     grid-auto-flow: column;
     grid-template-columns: 1fr;
   }
@@ -16,7 +21,7 @@
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 620px) {
   .gallery-layout {
     grid-template-columns: 1fr 1fr;
   }
@@ -26,5 +31,9 @@
   }
   .main-layout {
     grid-template-columns: 0px 10px 1fr;
+  }
+  .editor-layout {
+    width: 400px;
+    margin-left: 70px;
   }
 }

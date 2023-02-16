@@ -1,15 +1,52 @@
 .editor-container {
-    grid-column: 2;
-    background-color: #2a56bb;
-    border: 2px solid rgb(0, 0, 0);
-    width: 20rem;
-  }
-  
-  .editor-container > * {
-      padding: 35px;
-      text-align: center;
-      border: 1px solid black;
-  }
-  
+  grid-column: 2;
+  background-color: #2a56bb;
+  border: 2px solid rgb(0, 0, 0);
+}
 
-  
+.editor-container > * {
+  padding: 35px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.editor-container button {
+  background-color: #eaeaea;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.editor-container button:hover {
+  background-color: #447cff;
+  color: white;
+}
+
+.line-edit button {
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+
+.emoji-edit {
+  font-size: 30px;
+}
+
+.text-edit button {
+  margin-left: 1.3em;
+}
+
+.share {
+  padding: 22px;
+}
+
+.share a {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.share a:hover {
+  background-color: #447cff;
+  color: white;
+}
