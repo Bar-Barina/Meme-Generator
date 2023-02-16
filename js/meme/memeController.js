@@ -8,7 +8,6 @@ function onInit() {
   gElCanvas = document.querySelector('.my-canvas')
   gCtx = gElCanvas.getContext('2d')
 
-
   renderMeme()
   renderGallery()
 }
@@ -68,6 +67,7 @@ function onRandomMeme() {
   randomMeme()
   document.querySelector('.editor-layout').classList.remove('hidden')
   document.querySelector('.gallery-container').classList.add('hidden')
+  document.querySelector('.rand-meme').classList.add('hidden')
   renderMeme()
 }
 
@@ -77,23 +77,23 @@ function onAlignText(num) {
   renderMeme()
 }
 
+// A function which been called by the DOM and delete the selected line
 function onDeleteLine() {
   deleteLine()
   renderMeme()
 }
 
+// A function which been called by the DOM and adds a line
 function onAddLine() {
   addLine()
   renderMeme()
 }
 
-// function resizeCanvas() {
-//   const elContainer = document.querySelector('.canvas-container')
-//   gElCanvas.width = elContainer.offsetWidth
-//   gElCanvas.height = elContainer.offsetHeight
-// }
-
+// A function which been called by the DOM and adds the hidden class to element
 function onHide() {
   document.querySelector('.editor-layout').classList.add('hidden')
   document.querySelector('.gallery-container').classList.remove('hidden')
+  document.querySelector('.rand-meme').classList.remove('hidden')
+  document.querySelector('.rand-span').innerText =
+    'Proud of yourself now isnt ya?'
 }
