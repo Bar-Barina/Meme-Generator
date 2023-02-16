@@ -42,3 +42,4 @@ function makeLorem(wordCount = 100) {
     }
     return txt
 }
+
