@@ -1,69 +1,21 @@
+/* SETUP */
+@import 'setup/vars.css';
+@import 'setup/typography.css';
 
-body {
-  background-color: rgb(250, 239, 225);
-}
 
-h1 {
-  text-align: center;
-  text-decoration: underline rgb(149, 228, 131);
-}
+/* BASICS */
+@import 'basics/base.css';
+@import 'basics/layout.css';
+@import 'basics/helpers.css';
 
-.canvas-container {
-  background-color: rgb(215, 193, 160);
-  border: 1px solid rgb(188, 102, 102);
-  margin: auto;
-  width: 30vw;
-  height: 45vh;
-}
+/* COMPONENTS */
+@import 'components/canvas.css';
+@import 'components/editor.css';
+@import 'components/footer.css';
+@import 'components/gallery.css';
+@import 'components/header.css';
+@import 'components/logo.css';
+@import 'components/pagebtns.css';
+@import 'components/pageimgs.css';
 
-.my-canvas {
-  display: block;
-  margin: auto;
-  background-color: white;
-  border: 1px solid black;
-}
-
-.gallery-layout {
-  display: grid;
-  grid-template-columns: repeat(3, auto 1fr);
-  gap: 10px;
-  /* grid-template-rows: repeat(4.5,1fr); */
-  width: 800px;
-  height: 600px;
-  margin-top: 140px;
-  background-color: rgb(215, 193, 160);
-}
-
-.gallery-img {
-  width: 120px;
-  border: 1px solid rgb(95, 86, 189);
-  cursor: pointer;
-}
-
-.editor-container {
-  padding: 10px;
-}
-
-.font-size-btn {
-  width: 40px;
-  height: 35px;
-}
-
-button img {
-  width: 25px;
-  height: 25px;
-}
-
-.editor-container {
-  padding: 20px;
-  display: grid;
-  grid-template-rows: auto;
-  border: 1px solid;
-  justify-content: space-between;
-  width: 17vh;
-  margin-top: -10vh;
-  margin-bottom: 5vh;
-  margin-left: 3vh;
-  background-color: rgb(208, 236, 210);
-  border-radius: 20px;
-}
+@import 'setup/mq.css';

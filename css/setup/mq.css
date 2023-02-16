@@ -1,0 +1,30 @@
+@media (max-width: 1370px) {
+  .gallery-layout {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .editor-layout {
+    /* display: block; */
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+  }
+  .canvas-container {
+    margin-top: -20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 570px) {
+  .gallery-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-container {
+    width: 500px;
+    height: 100%;
+  }
+  .main-layout {
+    grid-template-columns: 0px 10px 1fr;
+  }
+}

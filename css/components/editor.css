@@ -1,0 +1,15 @@
+.editor-container {
+    grid-column: 2;
+    background-color: #2a56bb;
+    border: 2px solid rgb(0, 0, 0);
+    width: 20rem;
+  }
+  
+  .editor-container > * {
+      padding: 35px;
+      text-align: center;
+      border: 1px solid black;
+  }
+  
+
+  

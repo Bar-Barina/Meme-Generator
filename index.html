@@ -8,65 +8,105 @@
     <title>Barina's Meme Generator</title>
   </head>
   <body onload="onInit()" class="main-layout">
-    <!-- H1 -->
-    <h1>Barina's Meme Generator!</h1>
-
-    <!-- Canvas section -->
-    <div class="canvas-container">
-      <canvas class="my-canvas" width="400" height="400"></canvas>
-    </div>
-
-    <!-- Meme editor section -->
-    <section class="editor-container">
-      <!-- Text input -->
-      <label for="text">Enter Text:</label>
-      <input
-        type="text"
-        class="text"
-        oninput="onChangeText(this.value)"
-        placeholder="Enter text"
-      />
-
-      <!-- Color picker -->
-      <label for="color">Pick a color:</label>
-      <input
-        type="color"
-        class="clr-picker"
-        onchange="onChangeColor(this.value)"
-      />
-
-      <!-- Font size btns -->
-      <button
-        type="button"
-        title="increase-font-size"
-        class="font-size-btn"
-        onclick="onChangeFontSize(5)"
-      >
-        <img src="ICONS/increase font - icon.png" />
-      </button>
-      <button
-        type="button"
-        title="decrease-font-size"
-        class="font-size-btn"
-        onclick="onChangeFontSize(-5)"
-      >
-        <img src="ICONS/decrease font - icon.png" />
-      </button>
-
-      <!-- Switch line btn -->
-      <button
-        type="button"
-        title="switch-line"
-        class="switch-line-btn"
-        onclick="onSwitchLine()"
-      >
-        <img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" />
-      </button>
-
+    <!-- Header -->
+    <section class="main-layout nav-contant full">
+      <header class="main-header">
+        <div class="logo">Barina's Meme Generator</div>
+        <nav class="main-nav">
+          <ul class="main-menu">
+            <div class="link-div"></div>
+            <li><a href="#" onclick="onHide()">Gallery</a></li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </header>
     </section>
 
-      <!-- Image gallery section -->
-      <section class="gallery-container"></section>
+    <!-- Editor section -->
+    <section class="editor-layout hidden">
+
+      <!-- Canvas div -->
+      <div class="canvas-container">
+        <canvas class="my-canvas" width="400" height="400"></canvas>
+      </div>
+
+      <!-- editor tools section -->
+      <div class="editor-container">
+
+        <!-- line edit section -->
+        <div class="line-edit">
+          <input type="text" class="text" oninput="onChangeText(this.value)"
+           placeholder="Enter text"/>
+          <br/>
+
+          <!-- Switch line btn -->
+          <button type="button" title="switch-line" class="switch-line-btn"
+          onclick="onSwitchLine()">
+          <img src="icons/up-and-down-opposite-double-arrows-side-by-side.png"/>
+          </button>
+
+          <!-- Add line btn -->
+          <button type="button" title="add-line" class="add-line-btn" onclick="onAddLine()">
+          <img src="icons/add.png"/></button>
+
+          <!-- Delete line btn -->
+          <button type="button" title="delete-line" class="delete-line-btn" onclick="onDeleteLine()">
+          <img src="icons/trash.png"/></button>
+        </div>
+
+        <!-- Text edit section -->
+        <div class="text-edit">
+
+          <!-- Font size btns -->
+          <button type="button" title="increase-font-size" class="font-size-btn" onclick="onChangeFontSize(5)">
+          <img src="icons/increase font - icon.png"/></button>
+
+          <button type="button" title="decrease-font-size" class="font-size-btn" onclick="onChangeFontSize(-5)">
+          <img src="icons/decrease font - icon.png"/></button>
+
+          <!-- Aling text btns -->
+          <button type="button" title="align-left" class="align-left-btn" onclick="onAlignText(1)">
+          <img src="icons/align-to-left.png"/></button>
+
+          <button type="button" title="align-center" class="align-center-btn" onclick="onAlignText(2)">
+          <img src="icons/center-text-alignment.png"/></button>
+
+          <button type="button" title="align-right" class="align-right-btn" onclick="onAlignText(3)">
+          <img src="icons/align-to-right.png"/></button>
+          
+          <!-- Color picker -->
+          <input type="color" class="clr-picker" onchange="onChangeColor(this.value)"/>
+        </div>
+
+        <!-- Emojis section -->
+        <div class="emoji-edit">😎😍😴</div>
+
+        <!-- Share section -->
+        <div class="share">
+
+          <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)"/>
+
+          <!-- Facebook upload btn -->
+          <button class="btn" onclick="onUploadImg()">Upload to Facebook</button>
+
+          <!-- Download image -->
+          <a href="#" class="btn" onclick="downloadImg(this)" 
+          download="my-img.jpg">Download</a>
+        </div>
+
+    </section>
+<!-- Flex btn -->
+<div class="rand-meme">
+  <button type="button" title="flexable" class="flex-btn" 
+  onclick="onRandomMeme()">Im flexible!</button>
+</div>
+
+  <!-- Image gallery section -->
+    <section class="gallery-container gallery-layout"></section>
+
+
+    <!-- <footer class="main-layout full">ALOOOO</footer> -->
 
     <script src="js/utilService/util.js"></script>
     <script src="js/main.js"></script>
@@ -74,5 +114,7 @@
     <script src="js/gallery/galleryService.js"></script>
     <script src="js/meme/memeController.js"></script>
     <script src="js/gallery/galleryController.js"></script>
+    <script src="js/upload/upload.js"></script>
+    <script src="js/upload/uploadFB.js"></script>
   </body>
 </html>

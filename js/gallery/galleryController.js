@@ -16,5 +16,7 @@ function renderGallery() {
 // A function which been called by the DOM and renders the right image
 function onImgSelect(imgId) {
   setImg(imgId)
-  renderMeme()
+  document.querySelector('.editor-layout').classList.remove('hidden')
+  document.querySelector('.gallery-container').classList.add('hidden')
+  renderMeme()  
 }

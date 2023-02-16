@@ -28,32 +28,32 @@ var gImgs = [
 
 var gMeme = {
   selectedImgId: 5,
-  selectedLineIdx: 1,
+  selectedLineIdx: 0,
   lines: [
     {
       txt: '',
       size: 30,
-      align: 'left',
+      align: 'center',
       color: 'red',
     },
     {
       txt: '',
       size: 30,
-      align: 'right',
+      align: 'center',
       color: 'blue',
+    },
+    {
+      txt: '',
+      size: 30,
+      align: 'center',
+      color: 'green',
     },
   ],
 }
 
 //  A function which creates a meme
 function getMeme() {
-  var meme = {
-    txt: 'I sometimes eat Falafel',
-    size: 20,
-    align: 'center',
-    color: getRandomColor(),
-  }
-  return meme
+  return gMeme.lines[0]
 }
 
 // A function which sets the line text
@@ -75,12 +75,63 @@ function changeColor(newColor) {
 // A function which change the font size
 function changeFontSize(num) {
   gMeme.lines[gMeme.selectedLineIdx].size += num
-  gCtx.font = `${gMeme.lines[gMeme.selectedLineIdx].size}px Arial`
+  gCtx.font = `${gMeme.lines[gMeme.selectedLineIdx].size}px Impact`
 }
 
+// A function which switch the line idx
 function switchLine() {
-  if (gMeme.selectedLineIdx === 0) {
-    drawText(gMeme.lines[gMeme.selectedLineIdx].txt, 200, 300)
+  if (gMeme.lines.length === 1) return
+  if (gMeme.selectedLineIdx === gMeme.lines.length - 1) {
+    gMeme.selectedLineIdx = 0
+  } else {
+    gMeme.selectedLineIdx++
   }
-  drawText(gMeme.lines[gMeme.selectedLineIdx].txt, 200, 370)
+}
+
+//  A function which change the x & y coords for the draw text func
+function setCoords(idx) {
+  switch (idx) {
+    case 0:
+      return { x: 200, y: 50 }
+    case 1:
+      return { x: 200, y: 360 }
+    default:
+      return { x: 200, y: 200 }
+  }
+}
+
+// A function which generate a rand meme
+function randomMeme() {
+  let randMemeImg = getRandomIntInclusive(0, 18)
+  gMeme.selectedImgId = randMemeImg
+  let randMemeTxt = makeLorem()
+  gMeme.lines[gMeme.selectedLineIdx].txt = randMemeTxt
+  let randMemeSize = getRandomIntInclusive(15, 40)
+  gMeme.lines[gMeme.selectedLineIdx].size = randMemeSize
+  let randMemeColor = getRandomColor()
+  gMeme.lines[gMeme.selectedLineIdx].color = randMemeColor
+}
+
+// A function which handle the text alignment
+function alignText(num) {
+  switch (num) {
+    case 1:
+      gMeme.lines[gMeme.selectedLineIdx].align = 'right'
+      break
+    case 2:
+      gMeme.lines[gMeme.selectedLineIdx].align = 'center'
+      break
+    case 3:
+      gMeme.lines[gMeme.selectedLineIdx].align = 'left'
+      break
+  }
+}
+
+function deleteLine() {
+  gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+}
+
+function addLine() {
+  let newLine = getMeme()
+  gMeme.lines.unshift(newLine)
 }

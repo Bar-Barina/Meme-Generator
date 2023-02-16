@@ -1,0 +1,18 @@
+.gallery-img {
+  /* height: 17em; */
+  width: 100%;
+  border: 10px double white;
+  cursor: pointer;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+.gallery-img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+button img {
+  width: 25px;
+  height: 25px;
+}
