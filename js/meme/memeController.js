@@ -91,10 +91,46 @@ function onAddLine() {
 }
 
 // A function which been called by the DOM and adds the hidden class to element
-function onHide() {
+function onHideEditor() {
   document.querySelector('.editor-layout').classList.add('hidden')
   document.querySelector('.gallery-container').classList.remove('hidden')
   document.querySelector('.rand-meme').classList.remove('hidden')
-  document.querySelector('.rand-span').innerText =
-    'Proud of yourself now isnt ya?'
+  // document.querySelector('.rand-span').innerText ='Proud of yourself now isnt ya?'
+}
+
+// function onHideGallery() {
+//   document.querySelector('.editor-layout').classList.remove('hidden')
+//   document.querySelector('.gallery-container').classList.add('hidden')
+//   document.querySelector('.rand-meme').classList.add('hidden')
+// }
+
+
+function onShowMemeGallery() {
+  document.querySelector('.editor-layout').classList.add('hidden')
+  document.querySelector('.gallery-container').classList.add('hidden')
+  document.querySelector('.rand-meme').classList.add('hidden')
+  renderMemeGallery()
+}
+
+
+
+
+
+function renderMemeGallery() {
+  var savedImages = loadFromStorage('SavedMeme')
+  console.log('savedImages',savedImages)
+  var strHTML = ''
+  
+    strHTML += `<img src="imgs-square/${savedImages.selectedImgId}.jpg"
+    class="meme-gallery-img">`
+    // onclick="onImgSelect('${gImgs[i].id}')"
+    console.log('strHTML',strHTML)
+
+  var elMemeGContainer = document.querySelector('.meme-container')
+  elMemeGContainer.innerHTML = strHTML
+}
+
+function onSaveMeme() {
+  saveMeme()
+  renderMemeGallery()
 }

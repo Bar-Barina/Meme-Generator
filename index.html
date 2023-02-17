@@ -15,8 +15,8 @@
         <nav class="main-nav">
           <ul class="main-menu">
             <div class="link-div"></div>
-            <li><a href="#" onclick="onHide()">Gallery</a></li>
-            <li><a href="#">Memes</a></li>
+            <li><a href="#" onclick="onHideEditor()">Gallery</a></li>
+            <li><a href="#" onclick="onShowMemeGallery()">Memes</a></li>
             <li><a href="#">About</a></li>
           </ul>
         </nav>
@@ -93,18 +93,25 @@
           <!-- Download image -->
           <a href="#" class="btn" onclick="downloadImg(this)" 
           download="my-img.jpg">Download</a>
+
+          <!-- Save btn -->
+         <button type="button" title="save-btn" class="save-meme-btn"
+         onclick="onSaveMeme()">Save</button>
         </div>
 
     </section>
 <!-- Flex btn -->
-<div class="rand-meme">
+<div class="rand-meme hidden">
   <button type="button" title="flexable" class="flex-btn" 
   onclick="onRandomMeme()">Im flexible!</button>
   <!-- <span class="rand-span">Dont think too much, create that meme!</span> -->
 </div>
 
   <!-- Image gallery section -->
-    <section class="gallery-container gallery-layout"></section>
+    <section class="gallery-container gallery-layout hidden"></section>
+
+<!-- Meme gallery section -->
+    <section class="meme-container gallery-layout"></section>
 
 
     <!-- <footer class="main-layout full">ALOOOO</footer> -->

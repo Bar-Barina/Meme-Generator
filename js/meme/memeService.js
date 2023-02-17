@@ -53,7 +53,7 @@ var gMeme = {
 
 //  A function which creates a meme
 function getMeme() {
-  return gMeme.lines[0]
+  return gMeme
 }
 
 // A function which sets the line text
@@ -139,4 +139,9 @@ function addLine() {
 // A function which empty the line value after line change
 function clearLine() {
   document.querySelector('input[name="text"]').value = ''
+}
+
+function saveMeme() {
+  var meme = getMeme()
+  saveToStorage('SavedMeme', meme)
 }
