@@ -11,10 +11,12 @@
   background-color: rgb(245, 245, 245);
 }
 
-.rand-meme span {
-  margin-left: 7em;
+/* .rand-meme span {
   text-align: center;
-  font-size: 35px;
+  width: 7em;
+  height: 4em;
+  font-size: 30px;
+  margin-left: 7em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: black;
-}
+} */

@@ -19,19 +19,19 @@ function renderMeme() {
   img.onload = () => {
     gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)
     gMeme.lines.forEach((line, idx) => {
-      drawText(line.txt, idx, line.align)
+      drawText(line.txt, idx)
     })
     gCtx.font = `${gMeme.lines[gMeme.selectedLineIdx].size}px "Impact`
   }
 }
 
 // A function which draw text on the canvas
-function drawText(txt, idx, align) {
+function drawText(txt, idx) {
   gCtx.lineWidth = 1
   gCtx.strokeStyle = 'black'
-  gCtx.fillStyle = ''
-  gCtx.font = ``
-  gCtx.textAlign = align
+  gCtx.fillStyle = gMeme.lines[idx].color
+  gCtx.font = `${gMeme.lines[idx].size}px Impact`
+  gCtx.textAlign = gMeme.lines[idx].align
   gCtx.textBaseline = 'middle'
   const { x, y } = setCoords(idx)
   gCtx.fillText(txt, x, y)
@@ -60,6 +60,7 @@ function onChangeFontSize(num) {
 // A function which been called by the DOM and switch line
 function onSwitchLine() {
   switchLine()
+  clearLine()
 }
 
 // A function which been called by the DOM and generate meme

@@ -34,19 +34,19 @@ var gMeme = {
       txt: '',
       size: 30,
       align: 'center',
-      color: 'red',
+      color: 'white',
     },
     {
       txt: '',
       size: 30,
       align: 'center',
-      color: 'blue',
+      color: 'white',
     },
     {
       txt: '',
       size: 30,
       align: 'center',
-      color: 'green',
+      color: 'white',
     },
   ],
 }
@@ -69,13 +69,11 @@ function saveImgsToStorage() {
 // A function which change the color of the text
 function changeColor(newColor) {
   gMeme.lines[gMeme.selectedLineIdx].color = newColor
-  gCtx.fillStyle = newColor
 }
 
 // A function which change the font size
 function changeFontSize(num) {
   gMeme.lines[gMeme.selectedLineIdx].size += num
-  gCtx.font = `${gMeme.lines[gMeme.selectedLineIdx].size}px Impact`
 }
 
 // A function which switch the line idx
@@ -136,4 +134,9 @@ function deleteLine() {
 function addLine() {
   let newLine = getMeme()
   gMeme.lines.unshift(newLine)
+}
+
+// A function which empty the line value after line change
+function clearLine() {
+  document.querySelector('input[name="text"]').value = ''
 }

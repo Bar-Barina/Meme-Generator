@@ -1,27 +1,45 @@
-@media (max-width: 1380px) {
-  .gallery-layout {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+@media (max-width: 1550px) {
+  .editor-container {
+    grid-column: 1;
+    height: 100%;
   }
 
   .editor-layout {
     grid-template-columns: 1fr;
-    display: inline;
-    width: 80%;
+    width: 100%;
+  }
+
+  .canvas-container {
+    grid-row: 1;
+  }
+
+  .my-canvas {
+    height: 100%;
+    width: 100%;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
+  .gallery-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .editor-layout {
     grid-auto-flow: column;
     grid-template-columns: 1fr;
   }
-  .canvas-container {
-    margin-top: -20px;
-    margin-bottom: 30px;
+
+  .main-layout {
+    grid-template-columns: 100px 1fr 100px;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 1065px) {
+  .gallery-layout {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
   .gallery-layout {
     grid-template-columns: 1fr 1fr;
   }
@@ -29,8 +47,12 @@
     width: 500px;
     height: 100%;
   }
+
   .main-layout {
-    grid-template-columns: 0px 10px 1fr;
+    grid-template-columns: 20px 1fr 20px;
+  }
+  .main-header .main-menu a {
+    padding: 20px 20px;
   }
   .editor-layout {
     width: 400px;
