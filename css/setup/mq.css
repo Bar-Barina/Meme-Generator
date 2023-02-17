@@ -26,6 +26,7 @@
   .editor-layout {
     grid-auto-flow: column;
     grid-template-columns: 1fr;
+    width: 70%;
   }
 
   .main-layout {
@@ -49,7 +50,7 @@
   }
 
   .main-layout {
-    grid-template-columns: 20px 1fr 20px;
+    grid-template-columns: 5px 1fr 5px;
   }
   .main-header .main-menu a {
     padding: 20px 20px;
