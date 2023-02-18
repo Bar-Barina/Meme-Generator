@@ -150,8 +150,15 @@ function clearLine() {
 // A function which saves the meme to the storage
 function saveMeme() {
   var meme = getMeme()
- meme.url = gElCanvas.toDataURL('image/jpeg')
+  meme.url = gElCanvas.toDataURL('image/jpeg')
   var memes = loadFromStorage('SavedMeme')
   !memes ? (memes = [meme]) : memes.push(meme)
   saveToStorage('SavedMeme', memes)
+}
+
+// A function which adds an emoji to the line
+function addEmoji(val) {
+  var value = val.innerText
+  var emoji = gMeme.lines[gMeme.selectedLineIdx]
+  emoji.txt += value
 }

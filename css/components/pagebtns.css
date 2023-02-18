@@ -16,3 +16,11 @@
 .flex-btn:hover {
   background-color: #305dc5;
 }
+
+.emoji {
+  width: 3em;
+  height: 3em;
+  font-size: 1em;
+  width: 1.8em;
+  height: 1.8em;
+}

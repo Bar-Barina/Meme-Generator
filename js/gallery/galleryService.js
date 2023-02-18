@@ -1,6 +1,6 @@
 'use strict'
 
-var gFilterBy = {keyword:''}
+var gFilterBy = { keyword: '' }
 
 // A function which sets the right image according to the id
 function setImg(imgId) {
@@ -13,7 +13,6 @@ function downloadImg(elLink) {
   elLink.href = imgContent
 }
 
-
 // A function which set the filter to be by the right keyword
 function setFilterBy(filterBy) {
   if (filterBy.keyword !== undefined) gFilterBy.keyword = filterBy.keyword
@@ -22,6 +21,6 @@ function setFilterBy(filterBy) {
 
 // A function which returns the filterd images
 function getImg() {
-  var imgs = gImgs.filter(img => img.keyword[0].includes(gFilterBy.keyword))
+  var imgs = gImgs.filter((img) => img.keyword[0].includes(gFilterBy.keyword))
   return imgs
 }
