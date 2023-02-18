@@ -119,6 +119,7 @@ function onShowMemeGallery() {
 // A function which renders the meme gallery
 function renderMemeGallery() {
   var savedImages = loadFromStorage('SavedMeme')
+  if (!savedImages) return
   var strHTML = ''
   for (let i = 0; i < savedImages.length; i++) {
     strHTML += `<img src=${savedImages[i].url} class="meme-gallery-img gallery-img">`
