@@ -61,9 +61,9 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
   .gallery-container {
-    width: 410px;
+    width: 360px;
   }
   .editor-layout {
     width: 300px;
@@ -76,5 +76,8 @@
 
   .editor-container {
     width: 280px;
+  }
+  button {
+    margin-top:15px;
   }
 }
