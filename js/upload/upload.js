@@ -20,6 +20,7 @@ function loadImageFromInput(ev, onImageReady) {
   reader.readAsDataURL(ev.target.files[0]) // Read the file we picked
 }
 
+// A function which draw the image on the canvas
 function renderImg(img) {
   // Draw the img on the canvas
   gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height)

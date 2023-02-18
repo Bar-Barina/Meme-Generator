@@ -36,6 +36,15 @@ function drawText(txt, idx) {
   const { x, y } = setCoords(idx)
   gCtx.fillText(txt, x, y)
   gCtx.strokeText(txt, x, y)
+  if (gMeme.selectedLineIdx === idx && txt) drawRect(x, y, txt)
+}
+
+// A function which draw rect on the canvas
+function drawRect(x, y, txt) {
+  let width = gCtx.measureText(txt).width
+  gCtx.strokeStyle = 'black'
+  gCtx.strokeRect(x - width / 2, y - 20, width, 40)
+  gCtx.fillStyle = ''
 }
 
 // A function which been called by the DOM and changes the text by the user input
@@ -96,7 +105,6 @@ function onHideEditor() {
   document.querySelector('.gallery-container').classList.remove('hidden')
   document.querySelector('.rand-meme').classList.remove('hidden')
   document.querySelector('.meme-container').classList.add('hidden')
-  // document.querySelector('.rand-span').innerText ='Proud of yourself now isnt ya?'
 }
 
 // A function which been called by the DOM and shows the meme gallery

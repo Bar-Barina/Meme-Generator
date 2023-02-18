@@ -8,8 +8,8 @@
     <title>Barina's Meme Generator</title>
   </head>
   <body onload="onInit()" class="main-layout">
+
     <!-- Header -->
-  
     <section class="main-layout nav-contant full">
       <header class="main-header">
         <div class="logo">Barina's Meme Generator</div>
@@ -113,7 +113,7 @@
   <button type="button" title="flexable" class="flex-btn" 
   onclick="onRandomMeme()">Im flexible!</button>
 
-  <input type="text" onchange="onSetFilterBy({keyword: this.value})" class="filter-input" list="image-options" name="filter" placeholder="Search...">
+  <input type="text" onchange="onSetFilterBy({keyword: this.value})" class="filter-input" list="image-options" name="filter" placeholder="Search by keyword!">
   <datalist id="image-options">
     <option value="funny">
     <option value="animals">
@@ -121,7 +121,6 @@
     <option value="weird">
     <option value="movie">
   </datalist>
-  <!-- <span class="rand-span">Dont think too much, create that meme!</span> -->
 </div>
 
   <!-- Image gallery section -->
@@ -130,8 +129,6 @@
 <!-- Meme gallery section -->
     <section class="meme-container gallery-container gallery-layout hidden"></section>
 
-
-    <!-- <footer class="main-layout full">ALOOOO</footer> -->
 
     <script src="js/utilService/util.js"></script>
     <script src="js/main.js"></script>

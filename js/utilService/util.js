@@ -1,5 +1,7 @@
 'use strict'
 
+// UTIL FUNCTIONS! ALL IN USE!
+
 function saveToStorage(key, val) {
     localStorage.setItem(key, JSON.stringify(val))
 }
@@ -7,24 +9,6 @@ function saveToStorage(key, val) {
 function loadFromStorage(key) {
     var val = localStorage.getItem(key)
     return JSON.parse(val)
-}
-
-function getRandomColor() {
-    const letters = '0123456789ABCDEF'
-    let color = '#'
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)]
-    }
-    return color
-}
-
-function makeId(length = 6) {
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-    var txt = ''
-    for (var i = 0; i < length; i++) {
-        txt += possible.charAt(Math.floor(Math.random() * possible.length))
-    }
-    return txt
 }
 
 function getRandomIntInclusive(min, max) {
@@ -42,37 +26,3 @@ function makeLorem(wordCount = 100) {
     }
     return txt
 }
-
-
-
-// function onFilterGallery(value) {
-//     console.log('value', value)
-//     gImgs.forEach((img, idx) => {
-//       console.log(gImgs[idx].keyword)
-//       if (gImgs[idx].keyword.includes('value')) {
-//         img.style.display = 'block'
-//       } else {
-//         img.style.display = 'none'
-//       }
-//     })
-//   }
-  
-//   function getFilterdImgs(value) {
-//     var imgs = gImgs.filter((img) => img.keyword.includes(value))
-//     // gMeme[selectedImgId].splice(selectedImgId)
-//     console.log(imgs)
-//     // saveToStorage('FilterdImgs', imgs)
-//     return imgs
-//   }
-  
-//   function saveFilterdImgs() {
-//     var img = getImg()
-//     saveToStorage('FilterdImgs', img)
-//   }
-  
-
-// function onHideGallery() {
-//   document.querySelector('.editor-layout').classList.remove('hidden')
-//   document.querySelector('.gallery-container').classList.add('hidden')
-//   document.querySelector('.rand-meme').classList.add('hidden')
-// }

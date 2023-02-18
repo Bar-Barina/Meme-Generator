@@ -16,6 +16,7 @@ function onUploadImg() {
   doUploadImg(imgDataUrl, onSuccess)
 }
 
+
 function doUploadImg(imgDataUrl, onSuccess) {
   // Pack the image for delivery
   const formData = new FormData()

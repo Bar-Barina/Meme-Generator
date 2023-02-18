@@ -33,21 +33,9 @@ var gImgs = [
 ]
 
 var gMeme = {
-  selectedImgId: 5,
+  selectedImgId: 3,
   selectedLineIdx: 0,
   lines: [
-    {
-      txt: '',
-      size: 30,
-      align: 'center',
-      color: 'white',
-    },
-    {
-      txt: '',
-      size: 30,
-      align: 'center',
-      color: 'white',
-    },
     {
       txt: '',
       size: 30,
@@ -112,8 +100,6 @@ function randomMeme() {
   gMeme.lines[gMeme.selectedLineIdx].txt = randMemeTxt
   let randMemeSize = getRandomIntInclusive(15, 40)
   gMeme.lines[gMeme.selectedLineIdx].size = randMemeSize
-  // let randMemeColor = getRandomColor()
-  // gMeme.lines[gMeme.selectedLineIdx].color = randMemeColor
 }
 
 // A function which handle the text alignment
@@ -138,8 +124,13 @@ function deleteLine() {
 
 // A function which add a line
 function addLine() {
-  let newLine = getMeme()
-  gMeme.lines.unshift(newLine)
+  return gMeme.lines.push({
+    txt: '',
+    size: 30,
+    align: 'center',
+    color: 'white',
+    font: 'Impact',
+  })
 }
 
 // A function which empty the line value after line change

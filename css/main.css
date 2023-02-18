@@ -1,8 +1,3 @@
-/* SETUP */
-@import 'setup/vars.css';
-@import 'setup/typography.css';
-
-
 /* BASICS */
 @import 'basics/base.css';
 @import 'basics/layout.css';
@@ -11,11 +6,11 @@
 /* COMPONENTS */
 @import 'components/canvas.css';
 @import 'components/editor.css';
-@import 'components/footer.css';
 @import 'components/gallery.css';
 @import 'components/header.css';
 @import 'components/logo.css';
 @import 'components/pagebtns.css';
 @import 'components/pageimgs.css';
 
+/* SETUP */
 @import 'setup/mq.css';
