@@ -9,8 +9,7 @@
   </head>
   <body onload="onInit()" class="main-layout">
     <!-- Header -->
-    <H1>HELLO</H1>
-    
+  
     <section class="main-layout nav-contant full">
       <header class="main-header">
         <div class="logo">Barina's Meme Generator</div>
@@ -103,17 +102,26 @@
 
     </section>
 <!-- Flex btn -->
-<div class="rand-meme hidden">
+<div class="rand-meme">
   <button type="button" title="flexable" class="flex-btn" 
   onclick="onRandomMeme()">Im flexible!</button>
+
+  <input type="text" onchange="onSetFilterBy({keyword: this.value})" class="filter-input" list="image-options" name="filter" placeholder="Search...">
+  <datalist id="image-options">
+    <option value="funny">
+    <option value="animals">
+    <option value="baby">
+    <option value="weird">
+    <option value="movie">
+  </datalist>
   <!-- <span class="rand-span">Dont think too much, create that meme!</span> -->
 </div>
 
   <!-- Image gallery section -->
-    <section class="gallery-container gallery-layout hidden"></section>
+    <section class="gallery-container gallery-layout "></section>
 
 <!-- Meme gallery section -->
-    <section class="meme-container gallery-layout"></section>
+    <section class="meme-container gallery-layout hidden"></section>
 
 
     <!-- <footer class="main-layout full">ALOOOO</footer> -->

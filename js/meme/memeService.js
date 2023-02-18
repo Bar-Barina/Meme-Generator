@@ -1,29 +1,35 @@
 'use strict'
 
-// var gKeywordSearchCountMap = {'funny': 12,'cat': 16, 'baby': 2}
+var gKeywordSearchCountMap = {
+  funny: 4,
+  animals: 3,
+  baby: 3,
+  weird: 3,
+  movie: 5,
+}
 
 var IMGS_STORAGE_KEY = 'Images'
 
 // Images model
 var gImgs = [
-  { id: 1, url: 'imgs-square/1.jpg', keywords: ['funny', 'usa'] },
-  { id: 2, url: 'imgs-square/2.jpg', keywords: ['funny', 'usa'] },
-  { id: 3, url: 'imgs-square/3.jpg', keywords: ['funny', 'usa'] },
-  { id: 4, url: 'imgs-square/4.jpg', keywords: ['funny', 'usa'] },
-  { id: 5, url: 'imgs-square/5.jpg', keywords: ['funny', 'usa'] },
-  { id: 6, url: 'imgs-square/6.jpg', keywords: ['funny', 'usa'] },
-  { id: 7, url: 'imgs-square/7.jpg', keywords: ['funny', 'usa'] },
-  { id: 8, url: 'imgs-square/8.jpg', keywords: ['funny', 'usa'] },
-  { id: 9, url: 'imgs-square/9.jpg', keywords: ['funny', 'usa'] },
-  { id: 10, url: 'imgs-square/10.jpg', keywords: ['funny', 'usa'] },
-  { id: 11, url: 'imgs-square/11.jpg', keywords: ['funny', 'usa'] },
-  { id: 12, url: 'imgs-square/12.jpg', keywords: ['funny', 'usa'] },
-  { id: 13, url: 'imgs-square/13.jpg', keywords: ['funny', 'usa'] },
-  { id: 14, url: 'imgs-square/14.jpg', keywords: ['funny', 'usa'] },
-  { id: 15, url: 'imgs-square/15.jpg', keywords: ['funny', 'usa'] },
-  { id: 16, url: 'imgs-square/16.jpg', keywords: ['funny', 'usa'] },
-  { id: 17, url: 'imgs-square/17.jpg', keywords: ['funny', 'usa'] },
-  { id: 18, url: 'imgs-square/18.jpg', keywords: ['funny', 'usa'] },
+  { id: 1, url: 'imgs-square/1.jpg', keyword: ['funny'] },
+  { id: 2, url: 'imgs-square/2.jpg', keyword: ['animals'] },
+  { id: 3, url: 'imgs-square/3.jpg', keyword: ['animals'] },
+  { id: 4, url: 'imgs-square/4.jpg', keyword: ['animals'] },
+  { id: 5, url: 'imgs-square/5.jpg', keyword: ['baby'] },
+  { id: 6, url: 'imgs-square/6.jpg', keyword: ['funny'] },
+  { id: 7, url: 'imgs-square/7.jpg', keyword: ['baby'] },
+  { id: 8, url: 'imgs-square/8.jpg', keyword: ['movie'] },
+  { id: 9, url: 'imgs-square/9.jpg', keyword: ['baby'] },
+  { id: 10, url: 'imgs-square/10.jpg', keyword: ['funny'] },
+  { id: 11, url: 'imgs-square/11.jpg', keyword: ['weird'] },
+  { id: 12, url: 'imgs-square/12.jpg', keyword: ['weird'] },
+  { id: 13, url: 'imgs-square/13.jpg', keyword: ['movie'] },
+  { id: 14, url: 'imgs-square/14.jpg', keyword: ['movie'] },
+  { id: 15, url: 'imgs-square/15.jpg', keyword: ['movie'] },
+  { id: 16, url: 'imgs-square/16.jpg', keyword: ['funny'] },
+  { id: 17, url: 'imgs-square/17.jpg', keyword: ['weird'] },
+  { id: 18, url: 'imgs-square/18.jpg', keyword: ['movie'] },
 ]
 
 var gMeme = {
@@ -141,7 +147,9 @@ function clearLine() {
   document.querySelector('input[name="text"]').value = ''
 }
 
+// A function which saves the meme to the storage
 function saveMeme() {
   var meme = getMeme()
   saveToStorage('SavedMeme', meme)
 }
+

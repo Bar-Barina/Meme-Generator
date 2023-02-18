@@ -43,3 +43,36 @@ function makeLorem(wordCount = 100) {
     return txt
 }
 
+
+
+// function onFilterGallery(value) {
+//     console.log('value', value)
+//     gImgs.forEach((img, idx) => {
+//       console.log(gImgs[idx].keyword)
+//       if (gImgs[idx].keyword.includes('value')) {
+//         img.style.display = 'block'
+//       } else {
+//         img.style.display = 'none'
+//       }
+//     })
+//   }
+  
+//   function getFilterdImgs(value) {
+//     var imgs = gImgs.filter((img) => img.keyword.includes(value))
+//     // gMeme[selectedImgId].splice(selectedImgId)
+//     console.log(imgs)
+//     // saveToStorage('FilterdImgs', imgs)
+//     return imgs
+//   }
+  
+//   function saveFilterdImgs() {
+//     var img = getImg()
+//     saveToStorage('FilterdImgs', img)
+//   }
+  
+
+// function onHideGallery() {
+//   document.querySelector('.editor-layout').classList.remove('hidden')
+//   document.querySelector('.gallery-container').classList.add('hidden')
+//   document.querySelector('.rand-meme').classList.add('hidden')
+// }
