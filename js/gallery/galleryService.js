@@ -23,6 +23,5 @@ function setFilterBy(filterBy) {
 // A function which returns the filterd images
 function getImg() {
   var imgs = gImgs.filter(img => img.keyword[0].includes(gFilterBy.keyword))
-  console.log('imgs', imgs)
   return imgs
 }

@@ -150,6 +150,8 @@ function clearLine() {
 // A function which saves the meme to the storage
 function saveMeme() {
   var meme = getMeme()
-  saveToStorage('SavedMeme', meme)
+ meme.url = gElCanvas.toDataURL('image/jpeg')
+  var memes = loadFromStorage('SavedMeme')
+  !memes ? (memes = [meme]) : memes.push(meme)
+  saveToStorage('SavedMeme', memes)
 }
-

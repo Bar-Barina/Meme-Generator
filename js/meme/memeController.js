@@ -95,6 +95,7 @@ function onHideEditor() {
   document.querySelector('.editor-layout').classList.add('hidden')
   document.querySelector('.gallery-container').classList.remove('hidden')
   document.querySelector('.rand-meme').classList.remove('hidden')
+  document.querySelector('.meme-container').classList.add('hidden')
   // document.querySelector('.rand-span').innerText ='Proud of yourself now isnt ya?'
 }
 
@@ -104,6 +105,7 @@ function onShowMemeGallery() {
   document.querySelector('.gallery-container').classList.add('hidden')
   document.querySelector('.rand-meme').classList.add('hidden')
   renderMemeGallery()
+  document.querySelector('.meme-container').classList.remove('hidden')
 }
 
 // A function which renders the meme gallery
@@ -111,10 +113,10 @@ function renderMemeGallery() {
   var savedImages = loadFromStorage('SavedMeme')
   console.log('savedImages', savedImages)
   var strHTML = ''
-
-  strHTML += `<img src="imgs-square/${savedImages.selectedImgId}.jpg"
-    class="meme-gallery-img">`
-
+  for (let i = 0; i < savedImages.length; i++) {
+    strHTML += `<img src=${savedImages[i].url} class="meme-gallery-img gallery-img">`
+  }
+console.log(strHTML)
   var elMemeGContainer = document.querySelector('.meme-container')
   elMemeGContainer.innerHTML = strHTML
 }
@@ -122,5 +124,4 @@ function renderMemeGallery() {
 // A function which been called by the DOM and saves the meme
 function onSaveMeme() {
   saveMeme()
-  renderMemeGallery()
 }
