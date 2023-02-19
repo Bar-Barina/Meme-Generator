@@ -18,6 +18,7 @@ function renderGallery() {
 function onImgSelect(imgId) {
   setImg(imgId)
   document.querySelector('.editor-layout').classList.remove('hidden')
+  document.querySelector('.editor-layout').classList.add('flex')
   document.querySelector('.gallery-container').classList.add('hidden')
   document.querySelector('.rand-meme').classList.add('hidden')
   document.querySelector('.meme-container').classList.add('hidden')

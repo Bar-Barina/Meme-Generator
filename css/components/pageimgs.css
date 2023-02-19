@@ -1,5 +1,4 @@
 .gallery-img {
-  /* height: 17em; */
   width: 100%;
   border: 10px double white;
   cursor: pointer;
@@ -15,4 +14,5 @@
 button img {
   width: 25px;
   height: 25px;
+  padding: 1.5px;
 }

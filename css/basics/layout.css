@@ -19,12 +19,13 @@
 
 .editor-layout {
   display: grid;
-  width: 100vh;
+  /* width: 100vh; */
+  justify-content: space-evenly;
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: column;
-  gap: 20px;
-  margin-top: 3em;
-  margin-left: 14%;
+  gap: -100px;
+  /* margin-top: 3em;
+  margin-left: 14%; */
   background-color: #1d3d86;
   border: 10px double white;
 }

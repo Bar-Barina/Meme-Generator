@@ -13,7 +13,6 @@
 .editor-container button {
   background-color: #eaeaea;
   cursor: pointer;
-  border-radius: 8px;
 }
 
 .editor-container button:hover {
@@ -27,7 +26,7 @@
 }
 
 .emoji-edit {
-  font-size: 30px;
+  font-size: 27px;
 }
 
 .text-edit button {
@@ -36,17 +35,33 @@
 
 .share {
   padding: 49px;
+
 }
 
 .share a {
-  background-color: white;
+  background-color: #f0f0f0;
   color: black;
   border: 2px solid black;
-  padding: 3px;
-  border-radius: 10px;
+  padding: 1px;
 }
 
 .share a:hover {
   background-color: #447cff;
   color: white;
+}
+
+.text {
+  width: 12em;
+  height: 2.5em;
+}
+
+input[type='file'] {
+  color: transparent;
+  width: 80px;
+}
+
+
+.clr-picker {
+  margin-left: 15px;
+  height: 33px;
 }

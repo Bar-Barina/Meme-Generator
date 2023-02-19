@@ -101,6 +101,7 @@ function onAddLine() {
 
 // A function which been called by the DOM and adds the hidden class to element
 function onHideEditor() {
+  document.querySelector('.editor-layout').classList.remove('flex')
   document.querySelector('.editor-layout').classList.add('hidden')
   document.querySelector('.gallery-container').classList.remove('hidden')
   document.querySelector('.rand-meme').classList.remove('hidden')
@@ -109,6 +110,7 @@ function onHideEditor() {
 
 // A function which been called by the DOM and shows the meme gallery
 function onShowMemeGallery() {
+  document.querySelector('.editor-layout').classList.remove('flex')
   document.querySelector('.editor-layout').classList.add('hidden')
   document.querySelector('.gallery-container').classList.add('hidden')
   document.querySelector('.rand-meme').classList.add('hidden')
