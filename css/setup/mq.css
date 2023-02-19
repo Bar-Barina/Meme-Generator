@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .editor-container {
     grid-column: 1;
     height: 100%;
@@ -19,7 +19,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .gallery-layout {
     grid-template-columns: 1fr 1fr 1fr;
   }
