@@ -131,6 +131,7 @@ function renderMemeGallery() {
 // A function which been called by the DOM and saves the meme
 function onSaveMeme() {
   saveMeme()
+  onShowMemeGallery()
 }
 
 // A function which been called by the DOM and adds an emoji
