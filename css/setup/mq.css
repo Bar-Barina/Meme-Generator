@@ -1,4 +1,4 @@
-@media (max-width: 1580px) {
+@media (max-width: 1500px) {
   .editor-container {
     grid-column: 1;
     height: 100%;
@@ -6,11 +6,8 @@
 
   .editor-layout {
     flex-flow: column;
-    /* display: flex; */
-    /* grid-template-columns: 1fr; */
     width: 50%;
     margin-left: 27%;
-    /* height: 70%; */
   }
 
   .canvas-container {
@@ -26,7 +23,6 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
   .editor-layout {
-    /* grid-auto-flow: column; */
     grid-template-columns: 1fr;
     width: 70%;
   }
@@ -35,12 +31,6 @@
     grid-template-columns: 100px 1fr 100px;
   }
 }
-
-/* @media (max-width: 750px) {
-  .gallery-layout {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-} */
 
 @media (max-width: 550px) {
   .gallery-layout {
